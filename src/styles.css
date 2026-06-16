@@ -171,3 +171,56 @@
     color: transparent;
   }
 }
+
+@layer components {
+  .glass-hover {
+    transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+  }
+  .glass-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 50px oklch(0.5 0.15 250 / 0.22);
+    border-color: oklch(1 0.01 240 / 0.85);
+  }
+  .glow-ring {
+    position: relative;
+    isolation: isolate;
+  }
+  .glow-ring::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, oklch(1 0.01 240 / 0.9), oklch(0.7 0.15 245 / 0.35), oklch(1 0.01 240 / 0.1));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+            mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    pointer-events: none;
+    z-index: 1;
+  }
+  .blob {
+    position: absolute;
+    border-radius: 9999px;
+    filter: blur(60px);
+    opacity: 0.55;
+    pointer-events: none;
+  }
+  @keyframes float-y {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-14px); }
+  }
+  .float-slow { animation: float-y 9s ease-in-out infinite; }
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+  .shimmer-text {
+    background: linear-gradient(90deg, var(--foreground) 0%, var(--primary) 50%, var(--foreground) 100%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+            background-clip: text;
+    color: transparent;
+    animation: shimmer 4s linear infinite;
+  }
+}
