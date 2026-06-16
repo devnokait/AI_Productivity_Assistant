@@ -87,7 +87,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "WorkFlow AI is an integrated AI productivity suite for emails, meetings, planning, research and team chat.",
       },
       { name: "author", content: "WorkFlow AI" },
-      { property: "og:title", content: "WorkFlow AI" },
+      { property: "og:title", content: "WorkFlow AI — AI-Powered Workplace Productivity" },
       {
         property: "og:description",
         content: "AI-powered productivity suite for the modern workplace.",
@@ -95,6 +95,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "WorkFlow AI — AI-Powered Workplace Productivity" },
+      { name: "description", content: "Workflow AI is a smart workplace platform that automates tasks and enhances productivity using AI." },
+      { property: "og:description", content: "Workflow AI is a smart workplace platform that automates tasks and enhances productivity using AI." },
+      { name: "twitter:description", content: "Workflow AI is a smart workplace platform that automates tasks and enhances productivity using AI." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/70b64da3-de46-4044-b708-d8e524a5ab4a/id-preview-a55d73dd--2ccc1181-2e0b-4bd8-8642-512c3072443d.lovable.app-1781647238273.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/70b64da3-de46-4044-b708-d8e524a5ab4a/id-preview-a55d73dd--2ccc1181-2e0b-4bd8-8642-512c3072443d.lovable.app-1781647238273.png" },
     ],
     links: [
       {
